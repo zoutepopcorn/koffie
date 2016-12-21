@@ -71,8 +71,6 @@ function processPost(request, response, callback) {
 
 function processGet(request, response, callback) {
 	filePath = getContentPath(request.url)
-        console.log("getter");
-        console.log(filePath);
 	fs.exists(filePath, function(exists) {
 		if (exists) {
 			fs.readFile(filePath, function(error, content) {
